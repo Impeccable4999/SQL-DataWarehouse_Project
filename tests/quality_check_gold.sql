@@ -1,4 +1,14 @@
+SELECT customer_key, COUNT(*)
+FROM gold.dim_customers
+GROUP BY customer_key
+HAVING COUNT(*) > 1
 
+
+SELECT product_key, COUNT(*)
+FROM gold.dim_product
+GROUP BY product_key
+HAVING COUNT(*) > 1
+	
 SELECT DISTINCT
 cst_gndr,
 ca.gen,
